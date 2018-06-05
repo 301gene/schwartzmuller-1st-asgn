@@ -15,10 +15,16 @@ class App extends Component {
   }
 
   render() {
+    const style = {
+      margin: '32px',
+      border: '1px groove green',
+      padding: '4px'
+    };
+
     return (
-      <div className="App">
-        <UserInput changed={this.userNameHandler} />
-        <UserOutput userName={this.state.username} />
+      <div className="App" style={style}>
+        <UserInput changed={this.userNameHandler} userName={this.state.username} />
+        <UserOutput suserName={this.state.username} />
         <UserOutput />
       </div>
     );
